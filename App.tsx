@@ -61,6 +61,12 @@ export default App = () => {
                     }
                 }}
             />
+            <Button
+                title="Focus"
+                onPress={async () => {
+                    const photoResult = await cameraRef.current?.focus({ x: 0, y: 0 });
+                }}
+            />
             <View style={{ backgroundColor: 'red', height: 30 }}>
                 <View style={{ flex: 1, flexDirection: 'row' }}>
                     <Button
